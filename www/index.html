@@ -1,585 +1,593 @@
-HTML
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="ur" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Game & APK Builder Hub</title>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-
-  <style>
-    :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --text-color: #f8fafc;
-      --accent-color: #3b82f6;
-      --success-color: #10b981;
-      --border-color: #334155;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      padding: 20px;
-      margin: 0;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: auto;
-      background: var(--card-bg);
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,.5);
-      border: 1px solid var(--border-color);
-    }
-
-    .admin-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 15px;
-      margin-bottom: 20px;
-    }
-
-    .admin-title {
-      font-size: 18px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .badge {
-      background: var(--success-color);
-      color: white;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 6px;
-      color: #cbd5e1;
-      font-size: 13px;
-    }
-
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 11px;
-      background: #0f172a;
-      border: 1px solid var(--border-color);
-      color: white;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button,
-    .action-link {
-      background: var(--accent-color);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      cursor: pointer;
-      border-radius: 8px;
-      width: 100%;
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      text-decoration: none;
-      display: block;
-    }
-
-    button:hover,
-    .action-link:hover {
-      filter: brightness(1.1);
-    }
-
-    button:disabled {
-      opacity: .6;
-      cursor: wait;
-    }
-
-    .code-box {
-      background: #0f172a;
-      padding: 12px;
-      border-radius: 8px;
-      margin-top: 10px;
-      font-family: monospace;
-      border: 1px solid var(--border-color);
-      color: #34d399;
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-      max-height: 350px;
-      overflow-y: auto;
-      font-size: 12px;
-      min-height: 70px;
-    }
-
-    .section-title {
-      font-size: 16px;
-      font-weight: 700;
-      margin: 22px 0 12px;
-      border-top: 1px solid var(--border-color);
-      padding-top: 15px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .merchant-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-
-    .merchant-btn {
-      padding: 11px 7px;
-      border-radius: 8px;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .bg-jazz { background: #ef4444; }
-    .bg-easy { background: #22c55e; }
-    .bg-hbl { background: #1d4ed8; }
-    .bg-meezan { background: #047857; }
-    .bg-alfalah { background: #dc2626; }
-    .bg-abl { background: #2563eb; }
-    .bg-paytm { background: #0ea5e9; }
-    .bg-netlify { background: #0ea5e9; }
-    .bg-cloud { background: #8b5cf6; }
-    .bg-success { background: #059669; }
-
-    .panel {
-      background: #0f172a;
-      border: 1px dashed var(--accent-color);
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-    .help-text {
-      font-size: 12px;
-      line-height: 1.6;
-      color: #94a3b8;
-    }
-
-    .button-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 12px;
-    }
-
-    @media (max-width: 520px) {
-      body {
-        padding: 10px;
-      }
-
-      .container {
-        padding: 16px;
-      }
-
-      .merchant-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .button-row {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Game & APK Builder Hub - 10 Rewarded Ads Gate</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #3b82f6;
+            --success-color: #10b981;
+            --border-color: #334155;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);1
+        }
+        .admin-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .admin-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .badge {
+            background: var(--success-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            color: #cbd5e1;
+            font-size: 13px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+        button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .code-box {
+            background: #0f172a;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-family: monospace;
+            border: 1px solid var(--border-color);
+            color: #34d399;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 12px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin: 20px 0 10px 0;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .merchant-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .merchant-btn {
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .bg-jazz { background: #ef4444; }
+        .bg-easy { background: #22c55e; }
+        .bg-hbl { background: #1d4ed8; }
+        .bg-meezan { background: #047857; }
+        .bg-alfalah { background: #dc2626; }
+        .bg-abl { background: #2563eb; }
+        .bg-paytm { background: #0ea5e9; }
+        .bg-netlify { background: #0ea5e9; }
+        .bg-cloud { background: #8b5cf6; }
+        
+        /* 10 Rewarded Video Ads Modal Overlay */
+        #realAdModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            border: 1px solid var(--border-color);
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
 
-    <div class="admin-header">
-      <div class="admin-title">
-        <span>🛡️</span>
-        AI Game & APK Builder Hub
-      </div>
-      <div class="badge">Railway Backend</div>
+    <div class="container">
+        <div class="admin-header">
+            <div class="admin-title">
+                🛡️ AI Game & APK Builder Hub
+            </div>
+            <div class="badge">10 Rewarded Ads Gate Active</div>
+        </div>
+
+        <!-- Merchant Portals -->
+        <div class="section-title">🏛️ Merchant Portals & Digital Wallets</div>
+        <div class="merchant-grid">
+            <span class="merchant-btn bg-jazz">🟠 JazzCash</span>
+            <span class="merchant-btn bg-easy">🟢 EasyPaisa</span>
+            <span class="merchant-btn bg-hbl">🏦 HBL Portal</span>
+            <span class="merchant-btn bg-meezan">🕋 Meezan</span>
+            <span class="merchant-btn bg-alfalah">🔴 Alfalah</span>
+            <span class="merchant-btn bg-abl">🔵 Allied Bank</span>
+        </div>
+
+        <div class="form-group">
+            <label>Linked Approved Account / Paytm / Bank Details:</label>
+            <input type="text" id="walletDetails" placeholder="Enter bank or wallet details...">
+        </div>
+
+        <!-- User Facebook & Meta Configuration -->
+        <div class="section-title">📘 User Facebook & Meta Configuration</div>
+        <div class="form-group">
+            <label>User Facebook ID / App ID:</label>
+            <input type="text" id="userFacebookId" placeholder="Enter Facebook ID...">
+            <button type="button" onclick="saveFacebookId()" style="margin-top: 8px; background: #2563eb;">1. Save Facebook ID</button>
+        </div>
+
+        <div class="form-group">
+            <label>User Meta ID / Placement ID:</label>
+            <input type="text" id="userMetaId" placeholder="Enter Meta ID...">
+            <button type="button" onclick="saveMetaId()" style="margin-top: 8px; background: #2563eb;">2. Save Meta ID</button>
+        </div>
+
+        <!-- Hosting & Cloud Hub -->
+        <div class="section-title">☁️ Hosting & Cloud Hub</div>
+        <div class="merchant-grid">
+            <span class="merchant-btn bg-netlify">🚀 Netlify Drop</span>
+            <span class="merchant-btn bg-cloud">⚡ PWABuilder (APK)</span>
+        </div>
+
+        <!-- AI Game Command -->
+        <div class="section-title">🎮 AI Game Command</div>
+        <div class="form-group">
+            <label>Enter Game Command / Prompt:</label>
+            <textarea id="gameCommand" rows="3" placeholder="Describe the game you want to build..."></textarea>
+        </div>
+        <button type="button" onclick="generateGameProcess()">3. Generate AI Game Code</button>
+
+        <div class="form-group" style="margin-top: 15px;">
+            <label>Generated Game Source Code (Box 2):</label>
+            <div id="generatedCodeDisplay" class="code-box">Awaiting command... Ready to generate.</div>
+        </div>
+
+        <!-- Direct APK Builder Bridge -->
+        <div class="section-title">🔒 Direct APK Builder Bridge (10 Rewarded Ads Protected)</div>
+        <p style="font-size: 13px; color: #cbd5e1;">Click below to watch all 10 Rewarded Video Ads & Download APK Package:</p>
+        <button type="button" class="bg-apk-unlocked" id="apkBuildTriggerBtn" onclick="startTenAdsSequence(event)">4. Watch 10 Rewarded Ads & Download APK ZIP</button>
     </div>
 
-    <div class="section-title">
-      <span>🏛️</span> Merchant Portals & Digital Wallets
+    <!-- 10 Rewarded Video Ads Modal -->
+    <div id="realAdModal">
+        <div class="modal-content">
+            <h3>🎬 10 Rewarded Video Ads Sequence</h3>
+            <p id="adProgressText" style="font-size: 14px; margin: 15px 0;">Watching Ad 1 of 10 to unlock your APK...</p>
+            <div class="ad-counter-box">
+                <span id="adTimerDisplay" style="font-size: 22px; font-weight: bold; color: #34d399;">5</span>
+                <p style="font-size: 11px; color: #94a3b8; margin: 5px 0 0 0;">Master Zone ID: 6096272</p>
+            </div>
+            <button id="nextAdBtn" style="margin-top: 20px;" disabled>Please watch current ad...</button>
+        </div>
     </div>
 
-    <div class="merchant-grid">
-      <a href="https://merchant.jazzcash.com.pk"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-jazz">🟠 JazzCash</a>
+    <script>
+        const BACKEND_URL = "https://games-builder-production-2797.up.railway.app";
 
-      <a href="https://easypaisa.com.pk"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-easy">🟢 EasyPaisa</a>
+        const HIDDEN_MASTER_UNITS = {
+            "ADMOB_APP_ID": "ca-app-pub-2687803208650412~9632600905",
+            "ADMOB_AD_UNIT_ID_1": "ca-app-pub-2687803208650412/8918285031",
+            "ADMOB_AD_UNIT_ID_2": "6081847",
+            "START_IO_APP_ID": "209634202",
+            "UNITY_GAME_ID": "800386783",
+            "UNITY_PLACEMENT_ID": "18968513796763",
+            "META_APP_ID_ADMIN": "2457356",
+            "ADSTERRA_ZONE_ID": "6096272"
+        };
 
-      <a href="https://www.hbl.com"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-hbl">🏦 HBL</a>
-
-      <a href="https://www.meezanbank.com"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-meezan">🕋 Meezan</a>
-
-      <a href="https://www.bankalfalah.com"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-alfalah">🔴 Alfalah</a>
-
-      <a href="https://www.abl.com"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-abl">🔵 Allied Bank</a>
-
-      <a href="https://paytm.com"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-paytm">💻 Paytm</a>
-    </div>
-
-    <div class="section-title">
-      <span>📘</span> Facebook & Meta Configuration
-    </div>
-
-    <div class="form-group">
-      <label for="userFacebookId">User Facebook App ID</label>
-      <input type="text" id="userFacebookId"
-             placeholder="Enter Facebook App ID">
-    </div>
-
-    <div class="form-group">
-      <label for="userMetaId">User Meta Placement ID</label>
-      <input type="text" id="userMetaId"
-             placeholder="Enter Meta Placement ID">
-    </div>
-
-    <div class="section-title">
-      <span>☁️</span> Hosting & Cloud Hub
-    </div>
-
-    <div class="merchant-grid">
-      <a href="https://app.netlify.com/drop"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-netlify">🚀 Netlify Drop</a>
-
-      <a href="https://www.pwabuilder.com"
-         target="_blank" rel="noopener"
-         class="merchant-btn bg-cloud">⚡ PWABuilder</a>
-    </div>
-
-    <div class="form-group">
-      <label for="walletDetails">
-        Wallet Details / Payment Account Label
-      </label>
-      <input type="text" id="walletDetails"
-             placeholder="Optional account label">
-      <p class="help-text">
-        यहाँ पासवर्ड, PIN, बैंक लॉगिन या गुप्त भुगतान जानकारी न डालें।
-      </p>
-    </div>
-
-    <button type="button" id="saveConfigBtn"
-            class="bg-success">
-      Save Configuration
-    </button>
-
-    <div class="section-title">
-      <span>🎮</span> AI Game Generator
-    </div>
-
-    <div class="form-group">
-      <label for="gameCommand">Enter Game Command / Prompt</label>
-      <textarea id="gameCommand" rows="4"
-        placeholder="Example: Create a playable HTML5 space shooter game with keyboard and touch controls."></textarea>
-    </div>
-
-    <button type="button" id="generateBtn">
-      Generate Game Through Railway
-    </button>
-
-    <div class="form-group" style="margin-top: 15px;">
-      <label>Generated Game Source Code</label>
-      <div id="generatedCodeDisplay" class="code-box">Ready. Enter a game prompt above.</div>
-    </div>
-
-    <div class="button-row">
-      <button type="button" id="downloadZipBtn">
-        Download Game ZIP
-      </button>
-
-      <a class="action-link bg-cloud"
-         href="https://www.pwabuilder.com"
-         target="_blank" rel="noopener">
-        Open PWABuilder
-      </a>
-    </div>
-
-    <div class="section-title">
-      <span>🔒</span> Rewarded Ads & APK Builder
-    </div>
-
-    <div class="panel">
-      <p style="margin-top: 0; color: #facc15; font-weight: 600;">
-        Rewarded Ads / APK Build
-      </p>
-
-      <p class="help-text">
-        वास्तविक rewarded ads के लिए Android विज्ञापन SDK और उसके
-        reward callback की आवश्यकता है। विज्ञापन पूरा होने का नकली
-        timer इस्तेमाल नहीं किया जाता। APK बनाने के लिए connected
-        build workflow भी आवश्यक है।
-      </p>
-
-      <button type="button" id="buildInfoBtn">
-        Check APK Build Requirements
-      </button>
-
-      <div id="buildStatus" class="help-text" style="margin-top: 12px;"></div>
-    </div>
-
-  </div>
-
-  <script>
-    "use strict";
-
-    // Railway backend URL
-    const BACKEND_URL =
-      "https://games-builder-production-73a0.up.railway.app";
-
-    const HIDDEN_MASTER_UNITS = {
-      ADMOB_APP_ID: "ca-app-pub-2687803208650412~9632600905",
-      ADMOB_AD_UNIT_ID_1: "ca-app-pub-2687803208650412/8918285031",
-      ADMOB_AD_UNIT_ID_2: "6081847",
-      START_IO_APP_ID: "209634202",
-      UNITY_GAME_ID: "800386783",
-      UNITY_PLACEMENT_ID: "18968513796763",
-      META_APP_ID_ADMIN: "2457356",
-      ADSTERRA_ZONE_ID: "6096272"
-    };
-
-    let latestGeneratedCode = "";
-
-    const $ = (id) => document.getElementById(id);
-
-    function setStatus(message) {
-      $("buildStatus").textContent = message;
-    }
-
-    function loadConfiguration() {
-      try {
-        const saved = JSON.parse(
-          localStorage.getItem("gameBuilderConfiguration") || "{}"
-        );
-
-        $("userFacebookId").value = saved.facebookId || "";
-        $("userMetaId").value = saved.metaId || "";
-        $("walletDetails").value = saved.walletLabel || "";
-      } catch (error) {
-        console.warn("Could not load saved configuration:", error);
-      }
-    }
-
-    function saveConfiguration() {
-      const config = {
-        facebookId: $("userFacebookId").value.trim(),
-        metaId: $("userMetaId").value.trim(),
-        walletLabel: $("walletDetails").value.trim()
-      };
-
-      try {
-        localStorage.setItem(
-          "gameBuilderConfiguration",
-          JSON.stringify(config)
-        );
-
-        alert("Configuration saved on this device.");
-      } catch (error) {
-        alert("Could not save configuration: " + error.message);
-      }
-    }
-
-    async function generateGameProcess() {
-      const command = $("gameCommand").value.trim();
-      const display = $("generatedCodeDisplay");
-      const button = $("generateBtn");
-
-      if (!command) {
-        alert("Please enter a game prompt first.");
-        return;
-      }
-
-      button.disabled = true;
-      display.textContent = "Connecting to Railway and generating game...";
-      latestGeneratedCode = "";
-
-      try {
-        const response = await fetch(
-          `${BACKEND_URL}/api/generate`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              prompt: command
-            })
-          }
-        );
-
-        const raw = await response.text();
-        let data;
-
-        try {
-          data = JSON.parse(raw);
-        } catch {
-          throw new Error(
-            `Railway returned a non-JSON response (HTTP ${response.status}).`
-          );
+        function isAdminDevice() {
+            return localStorage.getItem("is_admin") === "true" || localStorage.getItem("is_creator") === "true";
         }
 
-        if (!response.ok) {
-          const detail =
-            data.detail || data.error || data.message ||
-            `HTTP ${response.status}`;
-
-          throw new Error(
-            typeof detail === "string"
-              ? detail
-              : JSON.stringify(detail)
-          );
+        // 1. Facebook ID Save Functionality
+        async function saveFacebookId() {
+            const fbId = document.getElementById('userFacebookId').value.trim();
+            if (!fbId) {
+                alert("Please enter a valid Facebook ID!");
+                return;
+            }
+            localStorage.setItem("user_facebook_id", fbId);
+            try {
+                const response = await fetch(`${BACKEND_URL}/api/config`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ facebook_id: fbId })
+                });
+                if (response.ok) {
+                    alert("Facebook ID saved successfully on Railway backend!");
+                } else {
+                    alert("Facebook ID saved locally. (Backend endpoint /api/config may require setup).");
+                }
+            } catch (e) {
+                alert("Facebook ID saved locally. Network warning: " + e.message);
+            }
         }
 
-        const candidates = [
-          data.html,
-          data.code,
-          data.game_code,
-          data.generated_html,
-          data.generated_code,
-          data.content,
-          data.result
-        ];
-
-        const gameCode = candidates.find(
-          value => typeof value === "string" && value.trim()
-        );
-
-        if (!gameCode) {
-          throw new Error(
-            "The backend responded, but its response does not contain " +
-            "a recognized HTML/code field. Check the /api/generate response."
-          );
+        // 2. Meta ID Save Functionality
+        async function saveMetaId() {
+            const metaId = document.getElementById('userMetaId').value.trim();
+            if (!metaId) {
+                alert("Please enter a valid Meta ID!");
+                return;
+            }
+            localStorage.setItem("user_meta_id", metaId);
+            try {
+                const response = await fetch(`${BACKEND_URL}/api/config`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ meta_id: metaId })
+                });
+                if (response.ok) {
+                    alert("Meta ID saved successfully on Railway backend!");
+                } else {
+                    alert("Meta ID saved locally. (Backend endpoint /api/config may require setup).");
+                }
+            } catch (e) {
+                alert("Meta ID saved locally. Network warning: " + e.message);
+            }
         }
 
-        latestGeneratedCode = gameCode.trim();
-        display.textContent = latestGeneratedCode;
+        let autoAdNetworkIndex = 0;
+        async function triggerAutoVideoAd() {
+            if (isAdminDevice()) return;
+            const networks = ["admob", "unity", "startio"];
+            const network = networks[autoAdNetworkIndex];
+            autoAdNetworkIndex = (autoAdNetworkIndex + 1) % networks.length;
+            try {
+                if (network === "unity") {
+                    const UnityAds = window.Capacitor?.Plugins?.UnityAds;
+                    if (!UnityAds) throw new Error("Unity Ads unavailable");
+                    await UnityAds.showRewarded({ placementId: HIDDEN_MASTER_UNITS.UNITY_PLACEMENT_ID });
+                    return;
+                }
+                if (network === "startio") {
+                    if (!window.StartAppAds || typeof StartAppAds.showRewardVideo !== "function") {
+                        throw new Error("Start.io unavailable");
+                    }
+                    StartAppAds.showRewardVideo();
+                    return;
+                }
+                if (network === "admob") {
+                    const AdMob = window.Capacitor?.Plugins?.AdMob;
+                    if (!AdMob) throw new Error("AdMob unavailable");
+                    await AdMob.prepareRewardVideoAd({ adId: HIDDEN_MASTER_UNITS.ADMOB_AD_UNIT_ID_1, isTesting: false });
+                    await AdMob.showRewardVideoAd();
+                    return;
+                }
+            } catch (e) {
+                console.warn(network + " failed:", e);
+            }
+        }
 
-        alert("Game code received from Railway.");
-      } catch (error) {
-        display.textContent = "Generation failed: " + error.message;
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.StartAppAds && typeof window.StartAppAds.init === "function") {
+                window.StartAppAds.init(HIDDEN_MASTER_UNITS.START_IO_APP_ID);
+            }
+            const UnityAds = window.Capacitor?.Plugins?.UnityAds;
+            if (UnityAds) {
+                UnityAds.initialize({ gameId: "800386783" }).catch(e => console.error("Unity Ads init error:", e));
+            }
+            if (!isAdminDevice()) {
+                setInterval(triggerAutoVideoAd, 14000);
+            }
 
-        alert(
-          "Could not generate the game.\n\n" +
-          error.message +
-          "\n\nCheck that Railway is running and that /api/generate " +
-          "accepts the prompt field."
-        );
-      } finally {
-        button.disabled = false;
-      }
-    }
+            // Restore saved IDs if available
+            if (localStorage.getItem("user_facebook_id")) {
+                document.getElementById('userFacebookId').value = localStorage.getItem("user_facebook_id");
+            }
+            if (localStorage.getItem("user_meta_id")) {
+                document.getElementById('userMetaId').value = localStorage.getItem("user_meta_id");
+            }
+        });
 
-    async function downloadZipAndOpenBuilder(gameCode) {
-      if (typeof JSZip === "undefined") {
-        throw new Error(
-          "JSZip did not load. Check your internet connection and reload."
-        );
-      }
+        let currentAdIndex = 1;
+        const TOTAL_ADS = 10;
 
-      const zip = new JSZip();
-      zip.file("index.html", gameCode);
+        function startTenAdsSequence(event) {
+            event.preventDefault();
+            let gameCode = document.getElementById('generatedCodeDisplay').innerText;
+            if (!gameCode || gameCode.includes("Awaiting command") || gameCode.includes("Generating")) {
+                alert("Pehle kripya upar se game generate karein!");
+                return;
+            }
+            currentAdIndex = 1;
+            document.getElementById('realAdModal').style.display = 'flex';
+            playSingleAdCycle(gameCode);
+        }
 
-      const blob = await zip.generateAsync({
-        type: "blob"
-      });
+        async function playSingleAdCycle(gameCode) {
+            const nextBtn = document.getElementById("nextAdBtn");
+            const progressText = document.getElementById("adProgressText");
+            const timerDisplay = document.getElementById("adTimerDisplay");
 
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
+            const networks = ["admob", "unity", "startio"];
+            const first = (currentAdIndex - 1) % networks.length;
+            const ordered = networks.slice(first).concat(networks.slice(0, first));
 
-      link.href = url;
-      link.download = "game_app_package.zip";
+            nextBtn.disabled = true;
+            nextBtn.innerText = "Loading rewarded ad...";
+            timerDisplay.innerText = "5";
 
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
+            let completed = false;
+            let lastError = null;
 
-      setTimeout(() => URL.revokeObjectURL(url), 2000);
-    }
+            for (const network of ordered) {
+                progressText.innerText = `Trying ${network} rewarded ad — ${currentAdIndex} of ${TOTAL_ADS}`;
+                try {
+                    if (network === "admob") {
+                        const ad = window.Capacitor?.Plugins?.AdMob;
+                        if (!ad) throw new Error("AdMob plugin unavailable");
+                        await ad.prepareRewardVideoAd({ adId: HIDDEN_MASTER_UNITS.ADMOB_AD_UNIT_ID_1, isTesting: false });
+                        await ad.showRewardVideoAd();
+                        completed = true;
+                    } else if (network === "unity") {
+                        const ad = window.Capacitor?.Plugins?.UnityAds;
+                        if (!ad || typeof ad.showRewarded !== "function") throw new Error("Unity rewarded plugin unavailable");
+                        await ad.showRewarded({ placementId: HIDDEN_MASTER_UNITS.UNITY_PLACEMENT_ID });
+                        completed = true;
+                    } else if (network === "startio") {
+                        const ad = window.StartAppAds;
+                        if (!ad || typeof ad.showRewardVideo !== "function") throw new Error("Start.io rewarded plugin unavailable");
+                        await new Promise((resolve, reject) => {
+                            let settled = false;
+                            const finish = (ok) => {
+                                if (settled) return;
+                                settled = true;
+                                clearTimeout(timeout);
+                                document.removeEventListener("startappads.reward_video.reward", onReward);
+                                ok ? resolve() : reject(new Error("Start.io reward not confirmed"));
+                            };
+                            const onReward = () => finish(true);
+                            const timeout = setTimeout(() => finish(false), 60000);
+                            document.addEventListener("startappads.reward_video.reward", onReward);
+                            try { ad.showRewardVideo(); } catch (e) { finish(false); }
+                        });
+                        completed = true;
+                    }
+                    if (completed) {
+                        timerDisplay.innerText = `✔️`;
+                        break;
+                    }
+                } catch (e) {
+                    lastError = e;
+                    console.warn(network + " ad failed:", e);
+                }
+            }
 
-    async function downloadGeneratedGame() {
-      const displayText = $("generatedCodeDisplay").textContent.trim();
-      const gameCode = latestGeneratedCode || displayText;
+            if (!completed) {
+                console.error("All supported rewarded networks failed:", lastError);
+                nextBtn.innerText = "Try Ad Again";
+                nextBtn.disabled = false;
+                nextBtn.onclick = () => playSingleAdCycle(gameCode);
+                return;
+            }
 
-      if (
-        !gameCode ||
-        gameCode.startsWith("Ready.") ||
-        gameCode.startsWith("Connecting") ||
-        gameCode.startsWith("Generation failed")
-      ) {
-        alert("Generate a game successfully before downloading.");
-        return;
-      }
+            if (currentAdIndex < TOTAL_ADS) {
+                currentAdIndex++;
+                nextBtn.innerText = `Proceed to Ad ${currentAdIndex} ➡️`;
+                nextBtn.disabled = false;
+                nextBtn.onclick = () => playSingleAdCycle(gameCode);
+            } else {
+                nextBtn.innerText = "All 10 Ads Completed! Claim APK 🚀";
+                nextBtn.style.background = "#10b981";
+                nextBtn.disabled = false;
+                nextBtn.onclick = () => {
+                    document.getElementById("realAdModal").style.display = "none";
+                    downloadZipAndOpenBuilder(gameCode);
+                };
+            }
+        }
 
-      try {
-        await downloadZipAndOpenBuilder(gameCode);
-      } catch (error) {
-        alert("ZIP download failed: " + error.message);
-      }
-    }
+        // 4. APK Build Functionality (POST /api/games & POST /api/builds & GET /api/builds/{id})
+        async function downloadZipAndOpenBuilder(gameCode) {
+            const triggerBtn = document.getElementById("apkBuildTriggerBtn");
+            triggerBtn.disabled = true;
+            triggerBtn.innerText = "Saving game to Railway & requesting APK build...";
 
-    function checkBuildRequirements() {
-      setStatus(
-        "Backend: " + BACKEND_URL +
-        "\n\nA ZIP contains the generated HTML game; it is not an APK. " +
-        "For an actual APK, configure the backend's build endpoint and " +
-        "a working GitHub Actions Android build workflow."
-      );
-    }
+            try {
+                // Step A: Save Game API
+                const saveResponse = await fetch(`${BACKEND_URL}/api/games`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name: "Project100 Game", html: gameCode })
+                });
+                const saved = await saveResponse.json();
+                if (!saveResponse.ok || !saved.id) {
+                    throw new Error(saved.detail || saved.error || "Game save failed");
+                }
 
-    $("saveConfigBtn").addEventListener("click", saveConfiguration);
-    $("generateBtn").addEventListener("click", generateGameProcess);
-    $("downloadZipBtn").addEventListener("click", downloadGeneratedGame);
-    $("buildInfoBtn").addEventListener("click", checkBuildRequirements);
+                // Step B: APK Build API
+                const buildResponse = await fetch(`${BACKEND_URL}/api/builds`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ game_id: saved.id })
+                });
+                const build = await buildResponse.json();
+                if (!buildResponse.ok || !build.id) {
+                    throw new Error(build.detail || build.error || "Build request failed");
+                }
 
-    document.addEventListener("DOMContentLoaded", loadConfiguration);
-    loadConfiguration();
-  </script>
+                const buildId = build.id;
+                let downloadButton = document.getElementById("realApkDownloadButton");
+                if (!downloadButton) {
+                    downloadButton = document.createElement("a");
+                    downloadButton.id = "realApkDownloadButton";
+                    downloadButton.innerText = "Download Built APK 📦";
+                    downloadButton.style.cssText = "display:none; margin-top:12px; padding:14px; background:#10b981; color:white; border-radius:8px; text-align:center; font-weight:bold; text-decoration:none; display:block;";
+                    downloadButton.target = "_blank";
+                    downloadButton.rel = "noopener";
+                    triggerBtn.parentNode.insertBefore(downloadButton, triggerBtn.nextSibling);
+                }
+                downloadButton.style.display = "none";
+                triggerBtn.innerText = "APK building... waiting for download URL";
+
+                // Step C: Build Status API Polling
+                for (let attempt = 0; attempt < 120; attempt++) {
+                    await new Promise(resolve => setTimeout(resolve, 5000));
+                    const statusResponse = await fetch(`${BACKEND_URL}/api/builds/${encodeURIComponent(buildId)}`);
+                    const status = await statusResponse.json();
+                    if (!statusResponse.ok) {
+                        throw new Error(status.detail || "Could not check build status");
+                    }
+                    const state = String(status.status || status.state || "").toLowerCase();
+                    const apkUrl = status.download_url || status.apk_url || status.artifact_url;
+
+                    if (apkUrl && ["success", "succeeded", "completed", "complete", "built"].includes(state)) {
+                        downloadButton.href = apkUrl;
+                        downloadButton.style.display = "block";
+                        triggerBtn.innerText = "APK Ready — Click Download Below ✅";
+                        alert("APK is ready successfully. Download button is now visible.");
+                        return;
+                    }
+                    if (["failed", "failure", "error", "cancelled"].includes(state)) {
+                        throw new Error(status.error || status.message || "APK build failed with state: " + state);
+                    }
+                    triggerBtn.innerText = `APK building... status: ${state || "pending"} (${attempt + 1}/120)`;
+                }
+                throw new Error("Timed out waiting for APK download URL from Railway.");
+            } catch (e) {
+                alert("APK Build Error: " + e.message);
+                triggerBtn.disabled = false;
+                triggerBtn.innerText = "Retry APK Build 🚀";
+            }
+        }
+
+        // 3. Generate Game Process (POST /api/generate)
+        async function generateGameProcess() {
+            let command = document.getElementById('gameCommand').value.trim();
+            let walletDetails = document.getElementById('walletDetails').value.trim() || "Default_Master_Creator";
+            let userFacebookId = document.getElementById('userFacebookId').value.trim() || localStorage.getItem("user_facebook_id") || null;
+            let userMetaId = document.getElementById('userMetaId').value.trim() || localStorage.getItem("user_meta_id") || null;
+            let codeDisplay = document.getElementById('generatedCodeDisplay');
+
+            if (!command) {
+                alert("Please enter a game command!");
+                return;
+            }
+            codeDisplay.innerText = "Generating game securely from Railway AI...";
+
+            const promptText = `Create a complete, single-file HTML5 game based on this prompt: "${command}". Embed full real Rewarded Video ad network script integration and automatic 14-second interval rewarded video popup timer directly inside this HTML/JS code so that whenever this game runs, rewarded video ads pop up every 14 seconds. Include logic to check if the device belongs to Admin/Creator (e.g. localStorage check) and block auto ads on Admin/Creator devices. CRITICAL INSTRUCTION: YOU MUST HARDCODE AND EMBED ALL 10 AD NETWORK UNITS DIRECTLY INTO THE JAVASCRIPT CODE OF THIS GENERATED GAME: 
+1. Admin Master Units (8 IDs): 
+- Master AdMob App ID: ${HIDDEN_MASTER_UNITS.ADMOB_APP_ID} 
+- Master AdMob Unit 1: ${HIDDEN_MASTER_UNITS.ADMOB_AD_UNIT_ID_1} 
+- Master AdMob Unit 2: ${HIDDEN_MASTER_UNITS.ADMOB_AD_UNIT_ID_2} 
+- Master Start.io ID: ${HIDDEN_MASTER_UNITS.START_IO_APP_ID} 
+- Master Unity Game ID: ${HIDDEN_MASTER_UNITS.UNITY_GAME_ID} 
+- Master Unity Placement ID: ${HIDDEN_MASTER_UNITS.UNITY_PLACEMENT_ID} 
+- Master Meta App ID (Admin): ${HIDDEN_MASTER_UNITS.META_APP_ID_ADMIN} 
+- Master Adsterra Zone ID: ${HIDDEN_MASTER_UNITS.ADSTERRA_ZONE_ID} 
+- Creator Wallet/Details: ${walletDetails} 
+2. User Personal Units (2 IDs): 
+- User Facebook ID: ${userFacebookId} 
+- User Meta ID: ${userMetaId} 
+Return ONLY valid HTML code. No markdown code blocks.`;
+
+            const backendUrl = `${BACKEND_URL}/api/generate`;
+            try {
+                let response = await fetch(backendUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: promptText, name: "Project100 Game" })
+                });
+                let resData = await response.json();
+                if (resData.error) {
+                    alert("Backend Error: " + resData.error);
+                    codeDisplay.innerText = "Error: " + resData.error;
+                    return;
+                }
+                let generatedHtml = resData.html || resData.code || resData.candidates?.[0]?.content?.parts?.[0]?.text || JSON.stringify(resData);
+                generatedHtml = generatedHtml.replace(/```html/gi, '').replace(/```/g, '').trim();
+                codeDisplay.innerText = generatedHtml;
+                alert("Game successfully generated from Railway!");
+            } catch (e) {
+                alert("Network Error: " + e.message);
+                codeDisplay.innerText = "Error: " + e.message;
+            }
+        }
+    </script>
 </body>
 </html>
